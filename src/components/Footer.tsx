@@ -1,4 +1,4 @@
-import { Sparkles, ArrowUp } from 'lucide-react'
+import { ArrowUp } from 'lucide-react'
 import { navLinks } from '../data/portfolioData'
 
 export function Footer() {
@@ -10,11 +10,8 @@ export function Footer() {
     <footer className="relative border-t border-purple-500/15 bg-[#090514] px-4 py-12 sm:px-6">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 text-center">
         
-        {/* Brand Logo Mark */}
-        <a href="#home" className="group flex flex-col items-center gap-2">
-          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-tr from-violet-600 to-fuchsia-500 text-white shadow-[0_0_20px_rgba(168,85,247,0.6)] transition-transform group-hover:scale-110">
-            <Sparkles className="h-6 w-6" />
-          </div>
+        {/* Brand Name */}
+        <a href="#home" className="group inline-flex items-center justify-center">
           <span className="text-lg font-bold tracking-tight text-white">
             Sravan<span className="text-purple-400">.</span>
           </span>

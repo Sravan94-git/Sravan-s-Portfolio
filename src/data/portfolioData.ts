@@ -1,4 +1,4 @@
-import profileImg from '../images/profile.jpg'
+import profileImg from '../images/profile.png'
 import project1 from '../images/project-1.jpg'
 import project2 from '../images/project-2.jpg'
 import project3 from '../images/project-3.jpg'

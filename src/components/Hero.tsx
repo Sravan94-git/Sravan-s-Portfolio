@@ -17,15 +17,11 @@ export function Hero() {
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="relative mx-auto flex items-center justify-center w-full max-w-[380px] lg:max-w-[440px]"
         >
-          {/* Subtle Glow behind circle */}
-          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#8750f7]/20 to-[#2a1454]/30 blur-xl" />
-
-          {/* Minimal Thin Border Circle Frame matching reference screenshot */}
-          <div className="relative aspect-square w-full rounded-full border border-[#8750f7]/20 bg-[#0f0715] overflow-hidden shadow-[0_0_35px_rgba(135,80,247,0.15)] transition-transform duration-500 hover:scale-[1.015]">
+          <div className="relative flex w-full max-w-[420px] items-center justify-center transition-transform duration-500 hover:scale-[1.015]">
             <img
               src={heroData.profileImage}
               alt="Sravan - Developer Portrait"
-              className="h-full w-full rounded-full object-cover object-center transition-transform duration-700 hover:scale-105"
+              className="h-auto max-h-[520px] w-full object-contain object-center transition-transform duration-700 hover:scale-105"
             />
           </div>
         </motion.div>
