@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Menu, X, Globe } from 'lucide-react'
+import { Mail, Menu, X } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { navLinks } from '../data/portfolioData'
 
@@ -19,25 +19,25 @@ export function Navbar() {
       initial={{ y: -30, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled ? 'bg-[#0f0715]/95 py-4 backdrop-blur-xl border-b border-[#8750f7]/15 shadow-[0_10px_30px_rgba(15,7,21,0.8)]' : 'py-7'
+      className={`fixed inset-x-0 top-0 z-50 border-b border-[#8750f7]/10 bg-[#050609]/95 backdrop-blur-xl transition-all duration-500 ${
+        scrolled ? 'py-4 shadow-[0_10px_30px_rgba(5,6,9,0.8)]' : 'py-5'
       }`}
     >
-      <div className="mx-auto flex max-w-[1340px] items-center justify-between px-6 lg:px-12">
+      <div className="mx-auto flex max-w-[1300px] items-center justify-between px-6 lg:px-10">
         {/* Left: Brand Double Circle Logo Mark */}
         <a href="#home" className="group flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-full border-[2.5px] border-white bg-transparent text-white transition-transform group-hover:scale-105">
-            <span className="font-sans text-2xl font-black text-white leading-none">S</span>
+          <div className="flex h-14 w-14 items-center justify-center rounded-full border-[2.5px] border-white bg-transparent text-white transition-transform group-hover:scale-105">
+            <span className="font-sans text-3xl font-black leading-none text-white">S</span>
           </div>
         </a>
 
         {/* Center: Navigation Links */}
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-[15px] font-medium text-white transition hover:text-[#8750f7]"
+                className="text-sm font-semibold text-white transition hover:text-[#a978ff]"
               >
                 {link.label}
               </a>
@@ -46,24 +46,13 @@ export function Navbar() {
         </ul>
 
         {/* Right: Social Circle Icons */}
-        <div className="hidden items-center gap-3 md:flex">
-          {/* Facebook (f) */}
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noreferrer"
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-transparent text-white text-xs font-bold transition hover:bg-[#8750f7] hover:border-[#8750f7] hover:scale-110"
-            aria-label="Facebook"
-          >
-            <span className="font-mono">f</span>
-          </a>
-
+        <div className="hidden items-center gap-4 md:flex">
           {/* LinkedIn (in) */}
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/sravan-sunkara-9ab532250/"
             target="_blank"
             rel="noreferrer"
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-transparent text-white text-[10px] font-bold transition hover:bg-[#8750f7] hover:border-[#8750f7] hover:scale-110"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-[#8750f7] bg-transparent text-[#a978ff] text-[10px] font-bold transition hover:bg-[#8750f7] hover:text-white hover:scale-110"
             aria-label="LinkedIn"
           >
             <span className="font-mono">in</span>
@@ -71,10 +60,10 @@ export function Navbar() {
 
           {/* GitHub Icon */}
           <a
-            href="https://github.com"
+            href="https://github.com/Sravan94-git"
             target="_blank"
             rel="noreferrer"
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-transparent text-white transition hover:bg-[#8750f7] hover:border-[#8750f7] hover:scale-110"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-[#8750f7] bg-transparent text-[#a978ff] transition hover:bg-[#8750f7] hover:text-white hover:scale-110"
             aria-label="GitHub"
           >
             <svg className="h-3.5 w-3.5 fill-current" viewBox="0 0 24 24">
@@ -82,16 +71,30 @@ export function Navbar() {
             </svg>
           </a>
 
-          {/* Dribbble / Web Icon */}
+          {/* LeetCode */}
           <a
-            href="https://dribbble.com"
+            href="https://leetcode.com/u/Sravan94/"
             target="_blank"
             rel="noreferrer"
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-transparent text-white transition hover:bg-[#8750f7] hover:border-[#8750f7] hover:scale-110"
-            aria-label="Website"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-[#8750f7] bg-transparent transition hover:bg-[#8750f7] hover:scale-110"
+            aria-label="LeetCode"
           >
-            <Globe className="h-3.5 w-3.5" />
+            <img
+              src="https://cdn.simpleicons.org/leetcode/a978ff"
+              alt=""
+              className="h-4 w-4 object-contain"
+            />
           </a>
+
+          {/* Email */}
+          <a
+            href="mailto:sravansunkara04@gmail.com"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-[#8750f7] bg-transparent text-[#a978ff] transition hover:bg-[#8750f7] hover:text-white hover:scale-110"
+            aria-label="Email"
+          >
+            <Mail className="h-4 w-4" />
+          </a>
+
         </div>
 
         {/* Mobile Hamburger Toggle */}

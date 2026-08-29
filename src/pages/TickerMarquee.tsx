@@ -31,7 +31,7 @@ function SpinningStar() {
 
 export function TickerMarquee() {
   return (
-    <div className="relative w-full overflow-hidden bg-black py-5 border-y border-white/10 shadow-2xl transform -rotate-1 z-20 my-4">
+    <div className="relative w-full overflow-hidden bg-black py-5 border-y border-white/10 shadow-2xl transform -rotate-1 z-20 -my-1">
       <div className="animate-marquee flex items-center gap-12 whitespace-nowrap">
         {[...techList, ...techList].map((item, idx) => (
           <div key={idx} className="flex items-center gap-12">

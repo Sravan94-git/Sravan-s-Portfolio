@@ -1,5 +1,5 @@
 import profileImg from '../images/profile.png'
-import project1 from '../images/project-1.jpg'
+import project1 from '../images/project-1.png'
 import project2 from '../images/project-2.jpg'
 import project3 from '../images/project-3.jpg'
 import project4 from '../images/project-4.jpg'
@@ -10,19 +10,19 @@ import project8 from '../images/project-8.jpg'
 import project9 from '../images/project-9.jpg'
 
 export const navLinks = [
-  { label: 'Services', href: '#services' },
-  { label: 'Works', href: '#projects' },
-  { label: 'Resume', href: '#experience' },
+  { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
+  { label: 'Resume', href: '#resume' },
+  { label: 'Works', href: '#projects' },
   { label: 'Contact', href: '#contact' },
 ]
 
 export const heroData = {
-  name: 'Sravan',
-  title: 'A Software Engineer & AI Developer based in India',
-  subtitle: 'Building scalable backend systems, full-stack applications, and AI-driven products with precision.',
+  name: 'Sravan Kumar',
+  shortName: 'Sravan',
+  title: 'Software Engineer & Full-Stack Developer',
+  subtitle: 'Building scalable REST APIs, full-stack applications, and AI-driven systems with Java, Python, AWS, and Docker.',
   roles: ['Backend Specialist', 'Full-Stack Developer', 'AI / ML Engineer', 'API Architect'],
-  cvLink: '/resume.pdf',
   profileImage: profileImg,
 }
 
@@ -33,37 +33,10 @@ export const stats = [
   { value: '4+', label: 'Years of Learning' },
 ]
 
-export const services = [
-  {
-    number: '01',
-    title: 'Backend & API Engineering',
-    description: 'Architecting high-throughput, secure RESTful APIs and microservices using ASP.NET Core, FastAPI, C#, and SQL Server.',
-    tags: ['ASP.NET Core', 'FastAPI', 'REST APIs', 'SQL Server'],
-  },
-  {
-    number: '02',
-    title: 'Full-Stack Web Applications',
-    description: 'Building responsive, pixel-perfect, interactive web apps using React, TypeScript, Tailwind CSS, and state management.',
-    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
-  },
-  {
-    number: '03',
-    title: 'AI & Machine Learning Solutions',
-    description: 'Developing NLP models, sentiment analysis engines, recommendation systems, and computer vision pipelines.',
-    tags: ['Python', 'TensorFlow', 'Scikit-learn', 'NLP', 'YOLOv8'],
-  },
-  {
-    number: '04',
-    title: 'Cloud & DevOps Systems',
-    description: 'Containerizing services with Docker, deploying resilient cloud infrastructures on AWS/Azure, and automating workflows.',
-    tags: ['AWS', 'Docker', 'PostgreSQL', 'Git', 'CI/CD'],
-  },
-]
-
 export const projects = [
   {
     id: 'cinesense',
-    name: 'CineSense: AI Movie Recommendation System',
+    name: 'CineSense',
     category: 'AI / ML',
     description: 'An AI-powered movie recommendation platform that analyzes review sentiment to recommend movies based on user mood.',
     highlights: [
@@ -74,11 +47,11 @@ export const projects = [
     technologies: ['React', 'FastAPI', 'Scikit-learn', 'Linear SVC', 'NLTK', 'Tailwind CSS', 'TMDB API'],
     image: project1,
     github: 'https://github.com',
-    demo: 'https://demo.com',
+    demo: 'https://movie-frontend-plum.vercel.app/',
   },
   {
     id: 'talentra',
-    name: 'Talentra – Multi-Tenant Recruitment Platform',
+    name: 'Talentra',
     category: 'Full Stack',
     description: 'A production-ready SaaS ATS with secure multi-tenant workflows, role-based access control, and recruitment pipeline tracking.',
     highlights: [
@@ -93,7 +66,7 @@ export const projects = [
   },
   {
     id: 'finpulse',
-    name: 'FinPulse: AI Credit Risk Analysis Platform',
+    name: 'FinPulse',
     category: 'Backend',
     description: 'A cloud-based credit risk prediction system using big data and machine learning to estimate loan default risk accurately.',
     highlights: [
@@ -108,7 +81,7 @@ export const projects = [
   },
   {
     id: 'rentaplace',
-    name: 'RentAPlace : Rental Management System',
+    name: 'RentAPlace',
     category: 'Full Stack',
     description: 'A full-stack property rental platform for listing management, booking workflows, direct messaging, and secure tenant access.',
     highlights: [
@@ -123,7 +96,7 @@ export const projects = [
   },
   {
     id: 'autosight',
-    name: 'AutoSight – Real-Time Vehicle Detection',
+    name: 'AutoSight',
     category: 'AI / ML',
     description: 'A real-time AI transportation system that detects and classifies vehicles with a two-stage deep learning pipeline.',
     highlights: [
@@ -138,7 +111,7 @@ export const projects = [
   },
   {
     id: 'flotect',
-    name: 'Flotect: Floating Trash Detection System',
+    name: 'Flotect',
     category: 'AI / ML',
     description: 'An AI-powered environmental monitoring system that detects and classifies floating waste in water bodies in real time.',
     highlights: [
@@ -153,7 +126,7 @@ export const projects = [
   },
   {
     id: 'alzheimers',
-    name: 'Alzheimer\'s Diagnosis via Explainable AI',
+    name: 'Alzheimer\'s',
     category: 'AI / ML',
     description: 'An AI-based medical imaging system that diagnoses Alzheimer\'s disease with explainable deep learning predictions.',
     highlights: [
@@ -200,57 +173,59 @@ export const projects = [
 
 export const educationItems = [
   {
-    period: '2018 — 2022',
-    title: 'B.Tech in Computer Science & Engineering',
-    institution: 'University College of Engineering',
-    detail: 'Core computer science foundation focused on software engineering, data structures, algorithm design, and artificial intelligence.',
-  },
-  {
-    period: '2024 — 2025',
-    title: 'Advanced AI & Cloud Certifications',
-    institution: 'Professional Specialization',
-    detail: 'Completed advanced tracks in ASP.NET Core microservices, cloud deployment on AWS, and deep learning pipelines.',
+    period: 'Oct 2021 — Jun 2025',
+    title: 'B.Tech in Computer Science and Technology',
+    institution: 'Amrita Vishwa Vidyapeetham, Bangalore, Karnataka',
+    detail: 'Built a foundation in operating systems, object-oriented programming, data structures and algorithms, DBMS, machine learning, and software engineering.',
   },
 ]
 
 export const experienceItems = [
   {
-    period: '2023 — Present',
-    title: 'Software Engineer',
-    company: 'Product Engineering Team',
-    detail: 'Architecting scalable backend microservices, RESTful APIs, and AI feature integrations with high performance and reliability.',
-  },
-  {
-    period: '2022 — 2023',
-    title: 'Software & Machine Learning Intern',
-    company: 'Technology Solutions Lab',
-    detail: 'Built full-stack web applications, backend services, and machine learning models for real-world client workflows.',
+    period: 'Jan 2025 — Present',
+    title: 'Software Engineer (Full Stack)',
+    company: 'Aayog Solutions LLC',
+    detail: 'Built a multi-tenant SaaS ATS with API and database-level data isolation, OAuth2/JWT authentication, OTP verification, recruitment workflows, PostgreSQL, Docker, GitHub Actions, and Nginx deployment pipelines.',
   },
 ]
 
 export const skillsList = [
-  { name: 'ASP.NET Core', category: 'Backend', percentage: 95, icon: 'dotnet' },
-  { name: 'FastAPI / Python', category: 'Backend', percentage: 92, icon: 'python' },
-  { name: 'React & TypeScript', category: 'Frontend', percentage: 90, icon: 'react' },
-  { name: 'C# Programming', category: 'Languages', percentage: 95, icon: 'csharp' },
-  { name: 'SQL & PostgreSQL', category: 'Database', percentage: 88, icon: 'sql' },
-  { name: 'Docker & AWS', category: 'DevOps', percentage: 85, icon: 'cloud' },
-  { name: 'AI & NLP Pipelines', category: 'AI / ML', percentage: 88, icon: 'brain' },
-  { name: 'REST API Architecture', category: 'Backend', percentage: 94, icon: 'api' },
+  { name: 'Java', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
+  { name: 'Python', logo: 'https://cdn.simpleicons.org/python' },
+  { name: 'JavaScript', logo: 'https://cdn.simpleicons.org/javascript' },
+  { name: 'HTML5', logo: 'https://cdn.simpleicons.org/html5' },
+  { name: 'CSS3', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
+  { name: 'NumPy', logo: 'https://cdn.simpleicons.org/numpy' },
+  { name: 'Pandas', logo: 'https://cdn.simpleicons.org/pandas' },
+  { name: 'FastAPI', logo: 'https://cdn.simpleicons.org/fastapi' },
+  { name: 'React', logo: 'https://cdn.simpleicons.org/react' },
+  { name: 'Scikit-learn', logo: 'https://cdn.simpleicons.org/scikitlearn' },
+  { name: 'OpenCV', logo: 'https://cdn.simpleicons.org/opencv' },
+  { name: 'TensorFlow', logo: 'https://cdn.simpleicons.org/tensorflow' },
+  { name: 'PostgreSQL', logo: 'https://cdn.simpleicons.org/postgresql' },
+  { name: 'MongoDB', logo: 'https://cdn.simpleicons.org/mongodb' },
+  { name: 'Git', logo: 'https://cdn.simpleicons.org/git' },
+  { name: 'GitHub', logo: 'https://cdn.simpleicons.org/github/ffffff' },
+  { name: 'Docker', logo: 'https://cdn.simpleicons.org/docker' },
+  { name: 'AWS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg' },
 ]
 
-export const testimonials = [
+export const certifications = [
   {
-    quote: 'Sravan delivered exceptional backend performance and reliable API architecture.',
-    name: 'Alex Vance',
-    role: 'Lead Architect @ TechCorp',
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+    title: 'Data Structures & Backend Development with Java',
+    issuer: 'Board Infinity (Coursera)',
+    date: 'June 2025',
+  },
+  {
+    title: 'Machine Learning Specialization',
+    issuer: 'DeepLearning.AI & Stanford University (Coursera)',
+    date: 'April 2024',
   },
 ]
 
-export const faqs = [
-  {
-    question: 'What is your primary engineering specialization?',
-    answer: 'I specialize in backend and full-stack software development.',
-  },
-]
+export const publication = {
+  title: 'Real-Time Multilingual Speech Translation and Communication Enhancement Tool',
+  venue: 'ICIMSSS-24 International Conference',
+  date: 'December 2024',
+}
+

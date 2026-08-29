@@ -1,15 +1,14 @@
-import { Navbar } from './components/Navbar'
-import { Hero } from './components/Hero'
-import { TickerMarquee } from './components/TickerMarquee'
-import { Services } from './components/Services'
-import { ProjectsSection } from './components/ProjectsSection'
-import { StatsBar } from './components/StatsBar'
-import { ExperienceEducation } from './components/ExperienceEducation'
-import { SkillsGrid } from './components/SkillsGrid'
-import { Contact } from './components/Contact'
-import { Footer } from './components/Footer'
-import { ScrollToTop } from './components/ScrollToTop'
-import { CursorGlow, ScrollProgress } from './components/effects'
+import { Hero } from './pages/Hero'
+import { TickerMarquee } from './pages/TickerMarquee'
+import { About } from './pages/About'
+import { ProjectsSection } from './pages/ProjectsSection'
+import { ExperienceEducation } from './pages/ExperienceEducation'
+import { SkillsGrid } from './pages/SkillsGrid'
+import { Contact } from './pages/Contact'
+import { Footer } from './ui/Footer'
+import { Navbar } from './ui/Navbar'
+import { ScrollToTop } from './ui/ScrollToTop'
+import { CursorGlow, ScrollProgress } from './ui/effects'
 
 function App() {
   return (
@@ -29,25 +28,22 @@ function App() {
         {/* 1. Hero Section */}
         <Hero />
 
-        {/* 2. Horizontal Tech Ticker Banner */}
+        {/* Compact technology strip at the edge of the hero */}
         <TickerMarquee />
 
-        {/* 3. Services Section (2x2 Grid) */}
-        <Services />
+        {/* 2. About */}
+        <About />
 
-        {/* 4. My Recent Works (Projects Showcase with Filter Tabs) */}
-        <ProjectsSection />
-
-        {/* 5. Stats Counter Bar */}
-        <StatsBar />
-
-        {/* 6. Education & Work Experience Side-by-Side */}
-        <ExperienceEducation />
-
-        {/* 7. My Skills Grid with Percentage Badges */}
+        {/* 3. Skills */}
         <SkillsGrid />
 
-        {/* 8. Contact Section ("Let's have a chat") */}
+        {/* 4. Education & Work Experience */}
+        <ExperienceEducation />
+
+        {/* 5. My Recent Works */}
+        <ProjectsSection />
+
+        {/* 6. Contact */}
         <Contact />
       </main>
 
