@@ -24,14 +24,12 @@ export function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-[1300px] items-center justify-between px-6 lg:px-10">
-        {/* Left: Brand Double Circle Logo Mark */}
         <a href="#home" className="group flex items-center gap-3">
           <div className="flex h-14 w-14 items-center justify-center rounded-full border-[2.5px] border-white bg-transparent text-white transition-transform group-hover:scale-105">
             <span className="font-sans text-3xl font-black leading-none text-white">S</span>
           </div>
         </a>
 
-        {/* Center: Navigation Links */}
         <ul className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
             <li key={link.href}>
@@ -45,9 +43,7 @@ export function Navbar() {
           ))}
         </ul>
 
-        {/* Right: Social Circle Icons */}
         <div className="hidden items-center gap-4 md:flex">
-          {/* LinkedIn (in) */}
           <a
             href="https://www.linkedin.com/in/sravan-sunkara-9ab532250/"
             target="_blank"
@@ -58,7 +54,6 @@ export function Navbar() {
             <span className="font-mono">in</span>
           </a>
 
-          {/* GitHub Icon */}
           <a
             href="https://github.com/Sravan94-git"
             target="_blank"
@@ -71,7 +66,6 @@ export function Navbar() {
             </svg>
           </a>
 
-          {/* LeetCode */}
           <a
             href="https://leetcode.com/u/Sravan94/"
             target="_blank"
@@ -86,7 +80,6 @@ export function Navbar() {
             />
           </a>
 
-          {/* Email */}
           <a
             href="mailto:sravansunkara04@gmail.com"
             className="flex h-9 w-9 items-center justify-center rounded-full border border-[#8750f7] bg-transparent text-[#a978ff] transition hover:bg-[#8750f7] hover:text-white hover:scale-110"
@@ -97,7 +90,6 @@ export function Navbar() {
 
         </div>
 
-        {/* Mobile Hamburger Toggle */}
         <div className="flex items-center gap-3 md:hidden">
           <button
             onClick={() => setOpen((v) => !v)}
@@ -109,7 +101,6 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Dropdown */}
       {open && (
         <motion.div
           initial={{ opacity: 0, y: -10 }}

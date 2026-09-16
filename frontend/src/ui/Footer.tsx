@@ -10,14 +10,12 @@ export function Footer() {
     <footer className="relative border-t border-purple-500/15 bg-[#090514] px-4 py-12 sm:px-6">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 text-center">
         
-        {/* Brand Name */}
         <a href="#home" className="group inline-flex items-center justify-center">
           <span className="text-lg font-bold tracking-tight text-white">
             Sravan<span className="text-purple-400">.</span>
           </span>
         </a>
 
-        {/* Footer Nav Links */}
         <ul className="flex flex-wrap items-center justify-center gap-6 text-xs font-semibold uppercase tracking-widest text-purple-300/70">
           {navLinks.map((link) => (
             <li key={link.href}>
@@ -28,7 +26,6 @@ export function Footer() {
           ))}
         </ul>
 
-        {/* Bottom row & Scroll to Top */}
         <div className="flex w-full max-w-7xl flex-col items-center justify-between gap-4 border-t border-purple-500/10 pt-8 sm:flex-row text-xs text-purple-300/60">
           <p>© 2026 Sravan. All rights reserved.</p>
           

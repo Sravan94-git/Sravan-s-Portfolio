@@ -4,13 +4,11 @@ import { heroData } from '../data/portfolioData'
 export function Hero() {
   return (
     <section id="home" className="relative flex min-h-[78vh] items-center overflow-hidden pt-28 pb-16 bg-[#0f0715]">
-      {/* Background ambient radial violet glow */}
       <div className="pointer-events-none absolute -top-20 right-0 h-[600px] w-[600px] rounded-full bg-[radial-gradient(circle,rgba(135,80,247,0.18)_0%,transparent_70%)] blur-[100px]" />
       <div className="pointer-events-none absolute top-1/3 left-10 h-[400px] w-[400px] rounded-full bg-[radial-gradient(circle,rgba(168,85,247,0.12)_0%,transparent_70%)] blur-[120px]" />
 
       <div className="relative mx-auto grid w-full max-w-[1340px] items-center gap-12 px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-12">
         
-        {/* LEFT COLUMN: Circular Profile Photo with Minimal Border */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -26,9 +24,7 @@ export function Hero() {
           </div>
         </motion.div>
 
-        {/* RIGHT COLUMN: Typography & Action Buttons */}
         <div className="relative z-10 text-left">
-          {/* Greeting */}
           <motion.h3
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
@@ -38,7 +34,6 @@ export function Hero() {
             Hi, I am {heroData.name}.
           </motion.h3>
 
-          {/* Headline (Decreased Font Size) */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -53,7 +48,6 @@ export function Hero() {
             </span>
           </motion.h1>
 
-          {/* Bio Description (Decreased Font Size) */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -63,19 +57,17 @@ export function Hero() {
             I design and code beautifully simple things and I love what I do. Just simple like that!
           </motion.p>
 
-          {/* Action Buttons Row */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.55 }}
             className="flex flex-wrap items-center gap-4"
           >
-            {/* Primary navigation actions */}
             <a
               href="#contact"
               className="rounded-full border border-white/50 bg-transparent px-7 py-3 text-xs sm:text-sm font-bold text-white transition-all duration-300 hover:bg-white hover:text-[#0f0715] hover:scale-105"
             >
-              Request Resume
+              Download Resume
             </a>
 
             <a

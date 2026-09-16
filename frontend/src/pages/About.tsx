@@ -25,7 +25,7 @@ export function About() {
           className="space-y-5 text-sm leading-8 text-white/70 sm:text-base"
         >
           <p>
-            I am Sravan, a software engineer and full-stack developer based in Bangalore, India. I build dependable digital products across backend engineering, full-stack development, and applied machine learning, with hands-on experience in Java, Python, SQL, AWS, and Docker.
+            I am Sravan, a software engineer and full-stack developer working in Hyderabad, India. I build dependable digital products across backend engineering, full-stack development, and applied machine learning, with hands-on experience in Java, Python, SQL, AWS, and Docker.
           </p>
           <p>
             I enjoy taking a product from an early idea to a working, scalable system. Recently, I have worked on a multi-tenant recruitment platform with strict data isolation, secure role-based access, automated deployment, and complete hiring workflows. I am especially interested in the space where robust APIs, cloud infrastructure, and intelligent features meet.

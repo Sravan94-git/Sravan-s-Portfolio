@@ -1,6 +1,5 @@
 import profileImg from '../images/profile.png'
 import project1 from '../images/project-1.png'
-import project2 from '../images/project-2.jpg'
 import project3 from '../images/project-3.jpg'
 import project4 from '../images/project-4.jpg'
 import project5 from '../images/project-5.jpg'
@@ -27,7 +26,7 @@ export const heroData = {
 }
 
 export const stats = [
-  { value: '9+', label: 'Projects Completed' },
+  { value: '8+', label: 'Projects Completed' },
   { value: '20+', label: 'Technologies' },
   { value: '10+', label: 'GitHub Repositories' },
   { value: '4+', label: 'Years of Learning' },
@@ -48,21 +47,6 @@ export const projects = [
     image: project1,
     github: 'https://github.com',
     demo: 'https://movie-frontend-plum.vercel.app/',
-  },
-  {
-    id: 'talentra',
-    name: 'Talentra',
-    category: 'Full Stack',
-    description: 'A production-ready SaaS ATS with secure multi-tenant workflows, role-based access control, and recruitment pipeline tracking.',
-    highlights: [
-      'Multi-tenant database isolation & JWT OAuth2 authentication',
-      'Complex query handling with SQLAlchemy & TanStack Query',
-      'Automated candidate status pipelines and metrics dashboard',
-    ],
-    technologies: ['React', 'FastAPI', 'PostgreSQL', 'SQLAlchemy', 'JWT', 'OAuth2', 'Tailwind CSS'],
-    image: project2,
-    github: 'https://github.com',
-    demo: 'https://demo.com',
   },
   {
     id: 'finpulse',
@@ -128,7 +112,7 @@ export const projects = [
     id: 'alzheimers',
     name: 'Alzheimer\'s',
     category: 'AI / ML',
-    description: 'An AI-based medical imaging system that diagnoses Alzheimer\'s disease with explainable deep learning predictions.',
+    description: 'An AI-based medical imaging system that analyzes brain MRI scans to support Alzheimer\'s disease classification with explainable deep learning predictions.',
     highlights: [
       'Convolutional neural networks trained on brain MRI scans',
       'Explainable AI heatmap overlays for clinician verification',
@@ -137,13 +121,12 @@ export const projects = [
     technologies: ['Python', 'TensorFlow', 'Keras', 'OpenCV', 'Pandas', 'NumPy', 'Matplotlib'],
     image: project7,
     github: 'https://github.com',
-    demo: 'https://demo.com',
   },
   {
     id: 'telugu_legal',
-    name: 'Cross-Lingual Telugu Legal Text Classifier',
+    name: 'Cross-Lingual Telugu Legal Documents Classifier',
     category: 'AI / ML',
-    description: 'A cross-lingual NLP system that classifies Telugu legal documents using FastText embeddings and transfer learning.',
+    description: 'A cross-lingual NLP system that classifies Telugu legal documents into meaningful categories using multilingual FastText embeddings and transfer learning.',
     highlights: [
       'FastText multilingual embeddings fine-tuned on legal corpora',
       'Multiclass document categorization for legal precedents',
@@ -152,7 +135,6 @@ export const projects = [
     technologies: ['Python', 'FastText', 'Scikit-learn', 'NLP', 'Machine Learning'],
     image: project8,
     github: 'https://github.com',
-    demo: 'https://demo.com',
   },
   {
     id: 'translator',
@@ -182,10 +164,16 @@ export const educationItems = [
 
 export const experienceItems = [
   {
-    period: 'Jan 2025 — Present',
-    title: 'Software Engineer (Full Stack)',
+    period: 'Jan 2025 — Jan 2026',
+    title: 'Fullstack AI Developer',
     company: 'Aayog Solutions LLC',
-    detail: 'Built a multi-tenant SaaS ATS with API and database-level data isolation, OAuth2/JWT authentication, OTP verification, recruitment workflows, PostgreSQL, Docker, GitHub Actions, and Nginx deployment pipelines.',
+    detail: 'Developed a multi-tenant AI-powered recruitment platform with secure API and database-level data isolation, OAuth2/JWT authentication, OTP verification, automated hiring workflows, PostgreSQL, Docker, GitHub Actions, and Nginx deployment pipelines.',
+  },
+  {
+    period: 'Mar 2026 — Present',
+    title: 'Project Engineer',
+    company: 'Wipro',
+    detail: 'Working on enterprise software delivery across full-stack development, API integration, automation, testing, and production-ready engineering practices.',
   },
 ]
 
@@ -199,7 +187,6 @@ export const skillsList = [
   { name: 'Pandas', logo: 'https://cdn.simpleicons.org/pandas' },
   { name: 'FastAPI', logo: 'https://cdn.simpleicons.org/fastapi' },
   { name: 'React', logo: 'https://cdn.simpleicons.org/react' },
-  { name: 'Scikit-learn', logo: 'https://cdn.simpleicons.org/scikitlearn' },
   { name: 'OpenCV', logo: 'https://cdn.simpleicons.org/opencv' },
   { name: 'TensorFlow', logo: 'https://cdn.simpleicons.org/tensorflow' },
   { name: 'PostgreSQL', logo: 'https://cdn.simpleicons.org/postgresql' },
@@ -207,7 +194,7 @@ export const skillsList = [
   { name: 'Git', logo: 'https://cdn.simpleicons.org/git' },
   { name: 'GitHub', logo: 'https://cdn.simpleicons.org/github/ffffff' },
   { name: 'Docker', logo: 'https://cdn.simpleicons.org/docker' },
-  { name: 'AWS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg' },
+  { name: 'AWS', logo: 'https://cdn.simpleicons.org/amazonaws' },
 ]
 
 export const certifications = [

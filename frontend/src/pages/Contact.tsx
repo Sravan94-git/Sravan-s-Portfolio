@@ -28,7 +28,6 @@ export function Contact() {
 
       <div className="relative rounded-2xl border border-purple-500/25 bg-[#130b29]/70 p-5 backdrop-blur-2xl sm:p-7">
         
-        {/* Giant Headline */}
         <div className="text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.3em] text-purple-400">
             Get In Touch
@@ -42,10 +41,7 @@ export function Contact() {
           </p>
         </div>
 
-        {/* Form & Direct Contact Info Grid */}
         <div className="mt-8 grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
-          
-          {/* Direct Details */}
           <div className="flex flex-col justify-center space-y-3">
             <div className="flex items-center gap-3 rounded-xl border border-purple-500/20 bg-purple-950/30 p-4">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-purple-600 text-white">
@@ -69,13 +65,12 @@ export function Contact() {
               <div>
                 <p className="text-xs uppercase tracking-wider text-purple-300">Location</p>
                 <p className="text-sm font-bold leading-6 text-white">
-                  Bangalore, India • Open to Remote & Global Work
+                  Hyderabad, India • Open to Remote & Global Work
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-3">
             <div>
               <label className="block text-xs font-semibold uppercase tracking-wider text-purple-300 mb-2">

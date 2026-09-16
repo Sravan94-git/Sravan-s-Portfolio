@@ -6,7 +6,6 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="relative w-full overflow-hidden bg-[#09070f] px-4 pb-24 pt-20 scroll-mt-24 sm:px-6 lg:px-10 lg:pb-28 lg:pt-24">
       
-      {/* Centered Title matching Image 1 */}
       <div className="text-center">
         <motion.h2
           initial={{ opacity: 0, y: 15 }}
@@ -27,7 +26,6 @@ export function ProjectsSection() {
         </motion.p>
       </div>
 
-      {/* Projects Cards List Container */}
       <div className="mx-auto mt-16 max-w-[1128px] space-y-12 pb-40">
           {projects.map((project, idx) => (
             <div
@@ -37,24 +35,19 @@ export function ProjectsSection() {
             >
               <div className="grid h-full min-w-0 gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-center lg:gap-14">
                 
-                {/* LEFT INFO SIDE matching Image 1 & 2 */}
                 <div className="flex flex-col justify-center">
-                  {/* Category Label in Purple */}
                   <span className="mb-4 text-sm font-medium uppercase tracking-[0.18em] text-[#9c63ff]">
                     {project.category}
                   </span>
 
-                  {/* Project Name */}
                   <h3 className="mb-5 max-w-xl text-xl font-extrabold leading-tight text-white sm:text-2xl lg:text-[36px]">
                     {project.name}
                   </h3>
 
-                  {/* Description */}
                   <p className="mb-8 max-w-lg text-xs font-normal leading-6 text-white/70 sm:text-sm">
                     {project.description}
                   </p>
 
-                  {/* Checkmark Bullet Points (matching Image 1 & 2) */}
                   <ul className="mb-9 max-w-xl space-y-4 text-xs leading-5 text-white/80 sm:text-sm">
                     {project.highlights && project.highlights.length > 0 ? (
                       project.highlights.map((h, i) => (
@@ -77,7 +70,6 @@ export function ProjectsSection() {
                     )}
                   </ul>
 
-                  {/* Tech Tag Pills */}
                   <div className="mb-10 flex flex-wrap gap-2">
                     {project.technologies.slice(0, 4).map((tech) => (
                       <span
@@ -89,20 +81,30 @@ export function ProjectsSection() {
                     ))}
                   </div>
 
-                  {/* View Live Project Link */}
-                  <div className="flex items-center gap-6">
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-2 text-xs font-semibold text-white transition-colors hover:text-[#b995ff] sm:text-sm"
-                    >
-                      View Live Project <ArrowUpRight className="h-3.5 w-3.5 text-[#8750f7]" />
-                    </a>
+                  <div className="flex flex-wrap items-center gap-6">
+                    {project.demo && (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 text-xs font-semibold text-white transition-colors hover:text-[#b995ff] sm:text-sm"
+                      >
+                        View Live Project <ArrowUpRight className="h-3.5 w-3.5 text-[#8750f7]" />
+                      </a>
+                    )}
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 text-xs font-semibold text-white transition-colors hover:text-[#b995ff] sm:text-sm"
+                      >
+                        GitHub <ArrowUpRight className="h-3.5 w-3.5 text-[#8750f7]" />
+                      </a>
+                    )}
                   </div>
                 </div>
 
-                {/* RIGHT WEBSITE PREVIEW */}
                 <div className="relative min-w-0 overflow-hidden rounded-[14px] border border-[#13252a] bg-[#0b1013] p-3 shadow-[0_18px_45px_rgba(0,0,0,0.45)] transition-transform duration-500 group-hover:scale-[1.01]">
                   <img
                     src={project.image}

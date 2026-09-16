@@ -15,7 +15,6 @@ export function ExperienceEducation() {
       </div>
       <div className="grid gap-12 lg:grid-cols-2">
         
-        {/* Left Column: Education */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -34,7 +33,6 @@ export function ExperienceEducation() {
           <div className="relative mt-8 space-y-8 pl-6 border-l border-purple-500/20">
             {educationItems.map((item, idx) => (
               <div key={idx} className="relative">
-                {/* Node Dot */}
                 <div className="absolute -left-[31px] top-1.5 h-3.5 w-3.5 rounded-full border-2 border-purple-400 bg-[#090514] shadow-[0_0_10px_rgba(168,85,247,0.8)]" />
 
                 <span className="text-xs font-semibold uppercase tracking-wider text-purple-400 font-mono">
@@ -54,7 +52,6 @@ export function ExperienceEducation() {
           </div>
         </motion.div>
 
-        {/* Right Column: Work Experience */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -73,7 +70,6 @@ export function ExperienceEducation() {
           <div className="relative mt-8 space-y-8 pl-6 border-l border-purple-500/20">
             {experienceItems.map((item, idx) => (
               <div key={idx} className="relative">
-                {/* Node Dot */}
                 <div className="absolute -left-[31px] top-1.5 h-3.5 w-3.5 rounded-full border-2 border-purple-400 bg-[#090514] shadow-[0_0_10px_rgba(168,85,247,0.8)]" />
 
                 <span className="text-xs font-semibold uppercase tracking-wider text-purple-400 font-mono">
