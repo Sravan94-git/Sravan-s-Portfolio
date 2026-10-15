@@ -42,7 +42,22 @@ cd backend
 python -m pip check
 ```
 
-## Render deployment
+## Vercel deployment (Frontend)
+
+The repository is configured to build cleanly on Vercel either from the repository root or with `frontend` set as the Root Directory:
+
+### Option A: Standard Vercel Root Directory (Recommended)
+1. In your Vercel Project, go to **Settings** > **General** > **Root Directory**.
+2. Click **Edit**, type `frontend`, and click **Save**.
+3. Framework Preset will automatically detect **Vite**, with build command `npm run build` and output directory `dist`.
+4. In **Settings** > **Environment Variables**, set:
+   - `VITE_API_URL`: Your backend API URL (e.g. `https://your-backend.onrender.com`).
+5. Trigger a Redeploy.
+
+### Option B: Monorepo Root Deployment
+- A root [vercel.json](file:///vercel.json) and root [package.json](file:///package.json) are provided with build commands that automatically install and build the frontend from the root directory.
+
+## Render deployment (Backend)
 
 Deploy the two parts as services in the same Render project:
 
@@ -52,3 +67,4 @@ Deploy the two parts as services in the same Render project:
 4. Set the backend `ALLOWED_ORIGINS` to the frontend URL and configure the SMTP variables from `backend/.env.example`.
 
 The contact form works on Render when those environment variables are configured. The protected resume endpoint also requires `RESUME_ACCESS_TOKEN` and a securely supplied `backend/private/Sravan_Resume.pdf`; the PDF is intentionally excluded from Git.
+

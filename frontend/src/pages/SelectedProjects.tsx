@@ -94,7 +94,7 @@ export function SelectedProjects() {
                     <a
                       href={project.demo}
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       className="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 text-white/60 transition-all hover:border-[#2b50ff] hover:text-[#3865ff] hover:scale-110"
                       aria-label={`View ${project.name} live demo`}
                     >
@@ -105,7 +105,7 @@ export function SelectedProjects() {
                     <a
                       href={project.github}
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       className="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 text-white/60 transition-all hover:border-[#2b50ff] hover:text-[#3865ff] hover:scale-110"
                       aria-label={`View ${project.name} on GitHub`}
                     >
@@ -196,7 +196,7 @@ export function SelectedProjects() {
                       <a
                         href={project.demo}
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                         className="flex h-7 w-7 items-center justify-center rounded-full border border-white/10 text-white/40 transition hover:border-[#2b50ff] hover:text-[#3865ff]"
                       >
                         <ArrowUpRight className="h-3 w-3" />
@@ -206,7 +206,7 @@ export function SelectedProjects() {
                       <a
                         href={project.github}
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                         className="flex h-7 w-7 items-center justify-center rounded-full border border-white/10 text-white/40 transition hover:border-[#2b50ff] hover:text-[#3865ff]"
                       >
                         <svg className="h-3 w-3 fill-current" viewBox="0 0 24 24">
@@ -244,7 +244,7 @@ export function SelectedProjects() {
                   <a
                     href={activePreview.demo}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 rounded-full bg-[#3865ff] px-4 py-1.5 text-xs font-semibold text-white transition hover:bg-[#2b50ff]"
                   >
                     Open Live Demo <ExternalLink className="h-3.5 w-3.5" />

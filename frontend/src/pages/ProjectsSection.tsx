@@ -86,7 +86,7 @@ export function ProjectsSection() {
                       <a
                         href={project.demo}
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-xs font-semibold text-white transition-colors hover:text-[#b995ff] sm:text-sm"
                       >
                         View Live Project <ArrowUpRight className="h-3.5 w-3.5 text-[#8750f7]" />
@@ -96,7 +96,7 @@ export function ProjectsSection() {
                       <a
                         href={project.github}
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-xs font-semibold text-white transition-colors hover:text-[#b995ff] sm:text-sm"
                       >
                         GitHub <ArrowUpRight className="h-3.5 w-3.5 text-[#8750f7]" />

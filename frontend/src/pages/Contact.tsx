@@ -8,13 +8,36 @@ export function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+
+    // If bot filled out honeypot, fake success without sending
+    if (formData.website.trim()) {
+      setStatus('success')
+      setFormData({ name: '', email: '', message: '', website: '' })
+      return
+    }
+
+    const trimmedName = formData.name.trim()
+    const trimmedEmail = formData.email.trim()
+    const trimmedMessage = formData.message.trim()
+
+    if (trimmedName.length < 2 || trimmedMessage.length < 10) {
+      setStatus('error')
+      return
+    }
+
     setStatus('sending')
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:8000'}/api/contact`, {
+      const baseUrl = (import.meta.env.VITE_API_URL || 'http://localhost:8000').replace(/\/+$/, '')
+      const response = await fetch(`${baseUrl}/api/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          name: trimmedName,
+          email: trimmedEmail,
+          message: trimmedMessage,
+          website: '',
+        }),
       })
       if (!response.ok) throw new Error('Contact request failed')
       setStatus('success')
@@ -104,6 +127,7 @@ export function Contact() {
                   <input
                     type="text"
                     required
+                    maxLength={100}
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="John Doe"
@@ -118,6 +142,7 @@ export function Contact() {
                   <input
                     type="email"
                     required
+                    maxLength={254}
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="john@example.com"
@@ -132,6 +157,7 @@ export function Contact() {
                   <textarea
                     rows={5}
                     required
+                    maxLength={5000}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Tell me about your project idea..."
@@ -139,15 +165,17 @@ export function Contact() {
                   />
                 </div>
 
-                {/* Honeypot */}
-                <input
-                  tabIndex={-1}
-                  autoComplete="off"
-                  value={formData.website}
-                  onChange={(e) => setFormData({ ...formData, website: e.target.value })}
-                  className="hidden"
-                  aria-hidden="true"
-                />
+                {/* Honeypot for bot protection */}
+                <div style={{ display: 'none' }} aria-hidden="true">
+                  <input
+                    type="text"
+                    name="website"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={formData.website}
+                    onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+                  />
+                </div>
 
                 <button
                   type="submit"

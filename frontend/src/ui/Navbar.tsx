@@ -49,7 +49,7 @@ export function Navbar() {
           <a
             href="https://www.linkedin.com/in/sravan-sunkara-9ab532250/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-transparent text-white/50 text-[9px] font-bold transition-all hover:border-[#3865ff]/40 hover:text-[#3865ff] hover:scale-110"
             aria-label="LinkedIn"
           >
@@ -59,7 +59,7 @@ export function Navbar() {
           <a
             href="https://github.com/Sravan94-git"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-transparent text-white/50 transition-all hover:border-[#3865ff]/40 hover:text-[#3865ff] hover:scale-110"
             aria-label="GitHub"
           >
@@ -71,7 +71,7 @@ export function Navbar() {
           <a
             href="https://leetcode.com/u/Sravan94/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-transparent transition-all hover:border-[#3865ff]/40 hover:scale-110"
             aria-label="LeetCode"
           >
