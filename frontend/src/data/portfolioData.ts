@@ -1,18 +1,24 @@
 import profileImg from '../images/profile.png'
-import project1 from '../images/project-1.png'
-import project3 from '../images/project-3.jpg'
-import project4 from '../images/project-4.jpg'
-import project5 from '../images/project-5.jpg'
-import project6 from '../images/project-6.jpg'
-import project7 from '../images/project-7.jpg'
-import project8 from '../images/project-8.jpg'
-import project9 from '../images/project-9.jpg'
+import cinesenseImg from '../images/project-1.png'
+import flotectImg from '../images/project-2.png'
+import rentalImg from '../images/project-3.png'
+
+export interface Project {
+  id: string
+  name: string
+  category: string
+  description: string
+  highlights: string[]
+  technologies: string[]
+  image?: string
+  github?: string
+  demo?: string
+}
 
 export const navLinks = [
-  { label: 'About', href: '#about' },
+  { label: 'Home', href: '#home' },
+  { label: 'Projects', href: '#projects' },
   { label: 'Skills', href: '#skills' },
-  { label: 'Resume', href: '#resume' },
-  { label: 'Works', href: '#projects' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -32,10 +38,10 @@ export const stats = [
   { value: '4+', label: 'Years of Learning' },
 ]
 
-export const projects = [
+export const projects: Project[] = [
   {
     id: 'cinesense',
-    name: 'CineSense',
+    name: 'Sentiment-based Movie Recommendation System',
     category: 'AI / ML',
     description: 'An AI-powered movie recommendation platform that analyzes review sentiment to recommend movies based on user mood.',
     highlights: [
@@ -44,28 +50,13 @@ export const projects = [
       'FastAPI backend paired with a sleek React UI',
     ],
     technologies: ['React', 'FastAPI', 'Scikit-learn', 'Linear SVC', 'NLTK', 'Tailwind CSS', 'TMDB API'],
-    image: project1,
-    github: 'https://github.com',
-    demo: 'https://movie-frontend-plum.vercel.app/',
-  },
-  {
-    id: 'finpulse',
-    name: 'FinPulse',
-    category: 'Backend',
-    description: 'A cloud-based credit risk prediction system using big data and machine learning to estimate loan default risk accurately.',
-    highlights: [
-      'ASP.NET Core Web API with Azure Cosmos DB & PySpark pipeline',
-      'Secure credential handling with Azure Key Vault & JWT',
-      'Real-time risk score calculation and report generation',
-    ],
-    technologies: ['ASP.NET Core', 'Azure', 'Cosmos DB', 'PySpark', 'Hadoop', 'Scikit-learn', 'React'],
-    image: project3,
-    github: 'https://github.com',
-    demo: 'https://demo.com',
+    image: cinesenseImg,
+    github: 'https://github.com/Sravan94-git/Sentiment-based-Movie-recommendation-system',
+    demo: 'https://sentiment-based-movie-recommendatio.vercel.app/',
   },
   {
     id: 'rentaplace',
-    name: 'RentAPlace',
+    name: 'Property Rental Management System',
     category: 'Full Stack',
     description: 'A full-stack property rental platform for listing management, booking workflows, direct messaging, and secure tenant access.',
     highlights: [
@@ -74,29 +65,14 @@ export const projects = [
       'Secure auth and automated invoice processing',
     ],
     technologies: ['Angular', 'ASP.NET Core', 'SQL Server', 'EF Core', 'JWT', 'Tailwind CSS'],
-    image: project4,
-    github: 'https://github.com',
-    demo: 'https://demo.com',
-  },
-  {
-    id: 'autosight',
-    name: 'AutoSight',
-    category: 'AI / ML',
-    description: 'A real-time AI transportation system that detects and classifies vehicles with a two-stage deep learning pipeline.',
-    highlights: [
-      'YOLOv8n + MobileViT deep learning detection pipeline',
-      'OpenCV real-time stream processing & classification',
-      'Flask API backend with low-latency video inference',
-    ],
-    technologies: ['Python', 'TensorFlow', 'YOLOv8n', 'MobileViT', 'OpenCV', 'Flask'],
-    image: project5,
-    github: 'https://github.com',
-    demo: 'https://demo.com',
+    image: rentalImg,
+    github: 'https://github.com/Sravan94-git/Property-Rental-Management-System',
+    demo: 'https://property-rental-management-system-tau.vercel.app/',
   },
   {
     id: 'flotect',
-    name: 'Flotect',
-    category: 'AI / ML',
+    name: 'Floating Trash Detection & Classification',
+    category: 'Computer Vision',
     description: 'An AI-powered environmental monitoring system that detects and classifies floating waste in water bodies in real time.',
     highlights: [
       'YOLOv8 custom-trained image recognition model',
@@ -104,42 +80,41 @@ export const projects = [
       'Environmental analytics dashboard',
     ],
     technologies: ['Python', 'Flask', 'YOLOv8', 'OpenCV', 'HTML', 'CSS'],
-    image: project6,
-    github: 'https://github.com',
-    demo: 'https://demo.com',
+    image: flotectImg,
+    github: 'https://github.com/Sravan94-git/Floating-trash-detection-and-classification',
+    demo: 'https://floating-trash-detection-and-classi.vercel.app/',
   },
   {
-    id: 'alzheimers',
-    name: 'Alzheimer\'s',
-    category: 'AI / ML',
-    description: 'An AI-based medical imaging system that analyzes brain MRI scans to support Alzheimer\'s disease classification with explainable deep learning predictions.',
+    id: 'finpulse',
+    name: 'Credit Risk Analysis',
+    category: 'FinTech / ML',
+    description: 'A cloud-based credit risk prediction system using big data and machine learning to estimate loan default risk accurately.',
     highlights: [
-      'Convolutional neural networks trained on brain MRI scans',
-      'Explainable AI heatmap overlays for clinician verification',
-      'Interactive diagnostic reporting interface',
+      'ASP.NET Core Web API with Azure Cosmos DB & PySpark pipeline',
+      'Secure credential handling with Azure Key Vault & JWT',
+      'Real-time risk score calculation and report generation',
     ],
-    technologies: ['Python', 'TensorFlow', 'Keras', 'OpenCV', 'Pandas', 'NumPy', 'Matplotlib'],
-    image: project7,
-    github: 'https://github.com',
+    technologies: ['ASP.NET Core', 'Azure', 'Cosmos DB', 'PySpark', 'Hadoop', 'Scikit-learn', 'React'],
+    github: 'https://github.com/Sravan94-git/Credit-Risk-Analysis',
   },
   {
-    id: 'telugu_legal',
-    name: 'Cross-Lingual Telugu Legal Documents Classifier',
-    category: 'AI / ML',
-    description: 'A cross-lingual NLP system that classifies Telugu legal documents into meaningful categories using multilingual FastText embeddings and transfer learning.',
+    id: 'autosight',
+    name: 'Indian Vehicle Detection & Classification',
+    category: 'Computer Vision',
+    description: 'A real-time AI transportation system that detects and classifies vehicles with a two-stage deep learning pipeline.',
     highlights: [
-      'FastText multilingual embeddings fine-tuned on legal corpora',
-      'Multiclass document categorization for legal precedents',
-      'REST API endpoint for high-throughput batch evaluation',
+      'YOLOv8n + MobileViT deep learning detection pipeline',
+      'OpenCV real-time stream processing & classification',
+      'Flask API backend with low-latency video inference',
     ],
-    technologies: ['Python', 'FastText', 'Scikit-learn', 'NLP', 'Machine Learning'],
-    image: project8,
-    github: 'https://github.com',
+    technologies: ['Python', 'TensorFlow', 'YOLOv8n', 'MobileViT', 'OpenCV', 'Flask'],
+    github: 'https://github.com/Sravan94-git/Indian-Vehicle-Detection-and-Classification',
+    demo: 'https://indian-vehicle-detection-and-classi.vercel.app/',
   },
   {
     id: 'translator',
-    name: 'Real-Time Speech-to-Speech Language Translator',
-    category: 'Full Stack',
+    name: 'Real-Time Language Translator',
+    category: 'Speech & AI',
     description: 'A real-time speech translation application that converts spoken input into translated audio output instantaneously.',
     highlights: [
       'Low-latency speech-to-text recognition pipeline',
@@ -147,9 +122,34 @@ export const projects = [
       'Text-to-speech audio playback synthesis with Streamlit UI',
     ],
     technologies: ['Python', 'Streamlit', 'SpeechRecognition', 'Google Translate API', 'gTTS'],
-    image: project9,
-    github: 'https://github.com',
-    demo: 'https://demo.com',
+    github: 'https://github.com/Sravan94-git/Real-time-language-translator',
+    demo: 'https://languagetranslator-black.vercel.app/',
+  },
+  {
+    id: 'alzheimers',
+    name: 'Alzheimer\'s Disease Detection',
+    category: 'Medical AI',
+    description: 'An AI-based medical imaging system that analyzes brain MRI scans to support Alzheimer\'s disease classification with explainable deep learning predictions.',
+    highlights: [
+      'Convolutional neural networks trained on brain MRI scans',
+      'Explainable AI heatmap overlays for clinician verification',
+      'Interactive diagnostic reporting interface',
+    ],
+    technologies: ['Python', 'TensorFlow', 'Keras', 'OpenCV', 'Pandas', 'NumPy', 'Matplotlib'],
+    github: 'https://github.com/Sravan94-git/Alzheimers-disease-detection',
+  },
+  {
+    id: 'telugu_legal',
+    name: 'Domain Classification of Legal Documents',
+    category: 'NLP / ML',
+    description: 'A cross-lingual NLP system that classifies Telugu legal documents into meaningful categories using multilingual FastText embeddings and transfer learning.',
+    highlights: [
+      'FastText multilingual embeddings fine-tuned on legal corpora',
+      'Multiclass document categorization for legal precedents',
+      'REST API endpoint for high-throughput batch evaluation',
+    ],
+    technologies: ['Python', 'FastText', 'Scikit-learn', 'NLP', 'Machine Learning'],
+    github: 'https://github.com/Sravan94-git/Domain-classification-of-legal-documents',
   },
 ]
 

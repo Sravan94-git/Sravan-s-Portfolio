@@ -1,9 +1,6 @@
 import { Hero } from './pages/Hero'
-import { TickerMarquee } from './pages/TickerMarquee'
-import { About } from './pages/About'
-import { ProjectsSection } from './pages/ProjectsSection'
-import { ExperienceEducation } from './pages/ExperienceEducation'
-import { SkillsGrid } from './pages/SkillsGrid'
+import { SelectedProjects } from './pages/SelectedProjects'
+import { EducationSkills } from './pages/EducationSkills'
 import { Contact } from './pages/Contact'
 import { Footer } from './ui/Footer'
 import { Navbar } from './ui/Navbar'
@@ -12,7 +9,7 @@ import { CursorGlow, ScrollProgress } from './ui/effects'
 
 function App() {
   return (
-    <div className="relative min-h-screen overflow-x-hidden bg-[#0f0715] text-white">
+    <div className="relative min-h-screen overflow-x-hidden bg-[#0a0a0c] text-white">
       <CursorGlow />
       <ScrollProgress />
 
@@ -23,15 +20,9 @@ function App() {
       <main>
         <Hero />
 
-        <TickerMarquee />
+        <SelectedProjects />
 
-        <About />
-
-        <SkillsGrid />
-
-        <ExperienceEducation />
-
-        <ProjectsSection />
+        <EducationSkills />
 
         <Contact />
       </main>

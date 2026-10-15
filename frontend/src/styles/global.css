@@ -4,28 +4,44 @@
 @import '@fontsource/sora/500.css';
 @import '@fontsource/sora/600.css';
 @import '@fontsource/sora/700.css';
+@import '@fontsource/space-grotesk/400.css';
+@import '@fontsource/space-grotesk/500.css';
+@import '@fontsource/space-grotesk/600.css';
+@import '@fontsource/space-grotesk/700.css';
+
+@font-face {
+  font-family: 'Hanson';
+  src: url('/fonts/Hanson-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 @theme inline {
   --font-sans: 'Sora', ui-sans-serif, system-ui, sans-serif;
-  --font-display: 'Sora', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Hanson', 'Space Grotesk', 'Sora', ui-sans-serif, system-ui, sans-serif;
 
-  --color-background: #0f0715;
+  --color-background: #0a0a0c;
   --color-foreground: #ffffff;
-  --color-border: rgba(135, 80, 247, 0.3);
-  --color-accent: #8750f7;
+  --color-border: rgba(43, 80, 255, 0.25);
+  --color-accent: #2b50ff;
 }
 
 :root {
-  --background: #0f0715;
+  --background: #0a0a0c;
   --foreground: #ffffff;
-  --foreground-muted: #dddddd;
-  --card: #140c1d;
-  --border: rgba(135, 80, 247, 0.3);
-  --accent: #8750f7;
+  --foreground-muted: #b0b0b0;
+  --card: #111114;
+  --card-elevated: #16161a;
+  --border: rgba(43, 80, 255, 0.2);
+  --accent: #2b50ff;
+  --accent-warm: #1d4ed8;
+  --surface: #111114;
+  --surface-strong: #1a1a1e;
 
   font-family: 'Sora', sans-serif;
   color: #ffffff;
-  background: #0f0715;
+  background: #0a0a0c;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -34,14 +50,14 @@
 
 html {
   scroll-behavior: smooth;
-  background: #0f0715;
+  background: #0a0a0c;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: #0f0715;
+  background: #0a0a0c;
   color: #ffffff;
   overflow-x: hidden;
 }
@@ -52,24 +68,24 @@ body {
 
 #root {
   min-height: 100vh;
-  background: #0f0715;
+  background: #0a0a0c;
 }
 
 ::selection {
-  background: rgba(135, 80, 247, 0.5);
+  background: rgba(43, 80, 255, 0.4);
   color: #ffffff;
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0f0715;
+  background: #0a0a0c;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #8750f7;
+  background: #2b50ff;
   border-radius: 9999px;
 }
 
@@ -90,4 +106,41 @@ body {
 
 .animate-marquee:hover {
   animation-play-state: paused;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(43, 80, 255, 0.2); }
+  50% { box-shadow: 0 0 40px rgba(43, 80, 255, 0.4); }
 }

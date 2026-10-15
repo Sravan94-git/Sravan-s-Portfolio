@@ -19,23 +19,25 @@ export function Navbar() {
       initial={{ y: -30, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className={`fixed inset-x-0 top-0 z-50 border-b border-[#8750f7]/10 bg-[#050609]/95 backdrop-blur-xl transition-all duration-500 ${
-        scrolled ? 'py-4 shadow-[0_10px_30px_rgba(5,6,9,0.8)]' : 'py-5'
-      }`}
+      className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-500 ${
+        scrolled
+          ? 'border-white/[0.04] bg-[#0a0a0c]/95 py-3 shadow-[0_10px_30px_rgba(0,0,0,0.5)]'
+          : 'border-transparent bg-transparent py-5'
+      } backdrop-blur-xl`}
     >
-      <div className="mx-auto flex max-w-[1300px] items-center justify-between px-6 lg:px-10">
+      <div className="mx-auto flex max-w-[1280px] items-center justify-between px-5 sm:px-8 lg:px-12">
         <a href="#home" className="group flex items-center gap-3">
-          <div className="flex h-14 w-14 items-center justify-center rounded-full border-[2.5px] border-white bg-transparent text-white transition-transform group-hover:scale-105">
-            <span className="font-sans text-3xl font-black leading-none text-white">S</span>
+          <div className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-[#3865ff] bg-transparent transition-all group-hover:bg-[#3865ff]/10 group-hover:scale-105">
+            <span className="font-display text-[20px] font-black leading-none text-[#3865ff]">S</span>
           </div>
         </a>
 
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul className="hidden items-center gap-7 md:flex">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm font-semibold text-white transition hover:text-[#a978ff]"
+                className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/60 transition-colors hover:text-[#3865ff]"
               >
                 {link.label}
               </a>
@@ -43,12 +45,12 @@ export function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden items-center gap-4 md:flex">
+        <div className="hidden items-center gap-3 md:flex">
           <a
             href="https://www.linkedin.com/in/sravan-sunkara-9ab532250/"
             target="_blank"
             rel="noreferrer"
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-[#8750f7] bg-transparent text-[#a978ff] text-[10px] font-bold transition hover:bg-[#8750f7] hover:text-white hover:scale-110"
+            className="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-transparent text-white/50 text-[9px] font-bold transition-all hover:border-[#3865ff]/40 hover:text-[#3865ff] hover:scale-110"
             aria-label="LinkedIn"
           >
             <span className="font-mono">in</span>
@@ -58,7 +60,7 @@ export function Navbar() {
             href="https://github.com/Sravan94-git"
             target="_blank"
             rel="noreferrer"
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-[#8750f7] bg-transparent text-[#a978ff] transition hover:bg-[#8750f7] hover:text-white hover:scale-110"
+            className="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-transparent text-white/50 transition-all hover:border-[#3865ff]/40 hover:text-[#3865ff] hover:scale-110"
             aria-label="GitHub"
           >
             <svg className="h-3.5 w-3.5 fill-current" viewBox="0 0 24 24">
@@ -70,22 +72,22 @@ export function Navbar() {
             href="https://leetcode.com/u/Sravan94/"
             target="_blank"
             rel="noreferrer"
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-[#8750f7] bg-transparent transition hover:bg-[#8750f7] hover:scale-110"
+            className="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-transparent transition-all hover:border-[#3865ff]/40 hover:scale-110"
             aria-label="LeetCode"
           >
             <img
-              src="https://cdn.simpleicons.org/leetcode/a978ff"
+              src="https://cdn.simpleicons.org/leetcode/888888"
               alt=""
-              className="h-4 w-4 object-contain"
+              className="h-3.5 w-3.5 object-contain opacity-50 transition-opacity hover:opacity-100"
             />
           </a>
 
           <a
             href="mailto:sravansunkara04@gmail.com"
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-[#8750f7] bg-transparent text-[#a978ff] transition hover:bg-[#8750f7] hover:text-white hover:scale-110"
+            className="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-transparent text-white/50 transition-all hover:border-[#3865ff]/40 hover:text-[#3865ff] hover:scale-110"
             aria-label="Email"
           >
-            <Mail className="h-4 w-4" />
+            <Mail className="h-3.5 w-3.5" />
           </a>
 
         </div>
@@ -93,10 +95,10 @@ export function Navbar() {
         <div className="flex items-center gap-3 md:hidden">
           <button
             onClick={() => setOpen((v) => !v)}
-            className="rounded-xl border border-[#8750f7]/30 bg-[#140c1d] p-2.5 text-white"
+            className="rounded-xl border border-white/10 bg-[#111114] p-2.5 text-white"
             aria-label="Toggle menu"
           >
-            {open ? <X size={22} /> : <Menu size={22} />}
+            {open ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </div>
@@ -105,15 +107,15 @@ export function Navbar() {
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mx-6 mt-4 rounded-2xl border border-[#8750f7]/30 bg-[#0f0715]/98 p-6 backdrop-blur-2xl md:hidden"
+          className="mx-5 mt-4 rounded-2xl border border-white/[0.06] bg-[#111114]/98 p-6 backdrop-blur-2xl md:hidden"
         >
-          <ul className="flex flex-col gap-4">
+          <ul className="flex flex-col gap-3">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   onClick={() => setOpen(false)}
                   href={link.href}
-                  className="block rounded-lg px-3 py-2 text-base font-medium text-white hover:bg-[#8750f7]/20 hover:text-[#8750f7]"
+                  className="block rounded-lg px-3 py-2.5 text-[13px] font-semibold text-white/70 hover:bg-[#3865ff]/10 hover:text-[#3865ff] transition-colors"
                 >
                   {link.label}
                 </a>

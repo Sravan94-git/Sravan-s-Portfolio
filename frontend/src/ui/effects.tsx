@@ -15,9 +15,9 @@ export function SectionHeader({ eyebrow, title, description }: SectionHeaderProp
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-80px' }}
         transition={{ duration: 0.5 }}
-        className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--surface-strong)] px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.4em] text-[var(--accent)]"
+        className="inline-flex items-center gap-2 rounded-full border border-white/[0.06] bg-[#111114] px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.3em] text-[#3865ff]"
       >
-          <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)] shadow-[0_0_10px_rgba(124,58,237,0.35)]" />
+          <span className="h-1.5 w-1.5 rounded-full bg-[#3865ff] shadow-[0_0_8px_rgba(43,80,255,0.6)]" />
         {eyebrow}
       </motion.p>
       <motion.h2
@@ -25,7 +25,7 @@ export function SectionHeader({ eyebrow, title, description }: SectionHeaderProp
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-80px' }}
         transition={{ duration: 0.6, delay: 0.05 }}
-        className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-[var(--foreground)] sm:text-5xl"
+        className="mt-4 font-display text-[36px] font-black tracking-[-0.03em] text-white sm:text-[44px] uppercase"
       >
         {title}
       </motion.h2>
@@ -35,7 +35,7 @@ export function SectionHeader({ eyebrow, title, description }: SectionHeaderProp
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="mt-4 text-base text-[var(--foreground-muted)]"
+          className="mt-4 text-[14px] text-white/50"
         >
           {description}
         </motion.p>
@@ -51,7 +51,7 @@ export function ScrollProgress() {
   return (
     <motion.div
       style={{ scaleX }}
-      className="fixed inset-x-0 top-0 z-[60] h-[2px] origin-left bg-gradient-to-r from-violet-400 via-pink-400 to-violet-400 shadow-[0_0_12px_rgba(124,58,237,0.45)]"
+      className="fixed inset-x-0 top-0 z-[60] h-[2px] origin-left bg-gradient-to-r from-[#2b50ff] via-[#6085ff] to-[#2b50ff] shadow-[0_0_10px_rgba(43,80,255,0.5)]"
     />
   )
 }
@@ -94,10 +94,10 @@ export function CursorGlow() {
     <div
       ref={ref}
       aria-hidden
-      className="pointer-events-none fixed left-0 top-0 z-[1] hidden h-[400px] w-[400px] rounded-full opacity-70 mix-blend-screen md:block"
+      className="pointer-events-none fixed left-0 top-0 z-[1] hidden h-[400px] w-[400px] rounded-full opacity-50 mix-blend-screen md:block"
       style={{
-        background: 'radial-gradient(circle, rgba(124,58,237,0.22) 0%, rgba(191,90,242,0.12) 40%, transparent 70%)',
-        filter: 'blur(20px)',
+        background: 'radial-gradient(circle, rgba(43,80,255,0.18) 0%, rgba(43,80,255,0.04) 50%, transparent 70%)',
+        filter: 'blur(25px)',
       }}
     />
   )
@@ -123,15 +123,15 @@ export function ParticleField({ count = 40 }: { count?: number }) {
       {particles.map((particle, index) => (
         <span
           key={`${particle.x}-${particle.y}-${index}`}
-          className="absolute rounded-full bg-violet-300"
+          className="absolute rounded-full bg-[#3865ff]"
           style={{
             left: `${particle.x}%`,
             top: `${particle.y}%`,
             width: `${particle.s}px`,
             height: `${particle.s}px`,
-            boxShadow: '0 0 8px rgba(124,58,237,0.7)',
+            boxShadow: '0 0 6px rgba(43,80,255,0.6)',
             animation: `float ${particle.d}s ease-in-out ${particle.delay}s infinite`,
-            opacity: 0.7,
+            opacity: 0.5,
           }}
         />
       ))}
